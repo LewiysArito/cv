@@ -1,0 +1,171 @@
+html {
+    height: 100%;
+    margin: 0;
+}
+
+body {
+    font: 0.8em sans-serif;
+    height: 100vh;
+    margin: 0;
+    padding: 0;
+    display: flex;
+    flex-wrap: nowrap;
+    justify-content: flex-start;
+}
+
+aside {
+    color: white;
+    background-color: rgb(31, 105, 179);
+    flex: 2;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    justify-content: space-around;
+    overflow-y: auto;
+}
+
+main {
+    color: black;
+    background-color: rgb(255, 255, 255);
+    flex: 7;
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+}
+
+main,
+aside {
+    display: flex;
+    flex-wrap: nowrap;
+    flex-direction: column;
+    height: 100vh;
+    width: 100vw;
+}
+
+main section {
+    padding-left: 4%;
+    padding-right: 4%;
+}
+main li,
+.about-me span {
+    font: 0.85em sans-serif;
+}
+
+main section h3 {
+    margin: 0.4em 0em 0.4em 0em;
+    padding: 0.5em 0em 0.5em 0em;
+    border-bottom: solid 0.1em rgb(198, 182, 182);
+}
+
+aside h4 {
+    margin: 0.7em 0em 0.7em 0em;
+}
+
+aside div h3 {
+    border-bottom: solid 0.1em white;
+}
+
+/* .photo, */
+.personal-info,
+.hobbies,
+.languages,
+.skills {
+    padding-left: 8%;
+    padding-right: 8%;
+}
+
+.places-job div,
+.educations div,
+.other-educations div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: flex-start;
+    align-content: flex-start;
+}
+
+.places-job > div,
+.educations > div,
+.other-educations > div {
+    margin-bottom: 1em;
+}
+
+.places-job div:first-child,
+.educations div:first-child,
+.other-educations div:first-child {
+    width: 100%;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+
+.places-job div div h4,
+.educations div div h4,
+.other-educations div div h4 {
+    flex: 1;
+    padding: 0.2em 0em 0.2em 0em;
+    margin-block-start: 0.5em;
+    margin-block-end: 0.5em;
+}
+
+.places-job div div span,
+.educations div div span,
+.other-educations div div span {
+    flex: 1;
+}
+
+.places-job div div i,
+.educations div div i,
+.other-educations div div i {
+    font: 0.75em sans-serif;
+}
+
+.photo {
+    padding: 3% 0% 3% 0%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    align-content: space-around;
+}
+
+.photo div {
+    width: 12em;
+    height: 12em;
+    border: 0px solid;
+    border-radius: 100%;
+    overflow: hidden;
+}
+
+.photo div img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover; /*Для пропорционального заполнения*/
+}
+
+@media screen and (max-width: 840px) {
+    body {
+        flex-direction: column;
+    }
+
+    aside,
+    main {
+        flex: none;
+        height: auto;
+        /*в данном случае элементы располагаются в столбец, поэтому высота блока неизвестна */
+    }
+
+    .photo div {
+        width: 12em;
+        height: 12em;
+    }
+
+    .personal-info,
+    .hobbies,
+    .languages,
+    .skills {
+        padding-left: 20%;
+        padding-right: 20%;
+    }
+}
