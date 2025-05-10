@@ -1,36 +1,26 @@
-html {
+html,
+body {
     height: 100%;
     margin: 0;
+    padding: 0;
+    font: 0.86em sans-serif;
 }
 
-body {
-    font: 0.8em sans-serif;
-    height: 100vh;
-    margin: 0;
-    padding: 0;
+.layout {
     display: flex;
-    flex-wrap: nowrap;
-    justify-content: flex-start;
+    align-items: stretch;
+    min-height: 100vh;
 }
 
 aside {
-    color: white;
-    background-color: rgb(31, 105, 179);
     flex: 2;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
-    justify-content: space-around;
-    overflow-y: auto;
+    background-color: rgb(31, 105, 179);
+    color: white;
 }
 
 main {
-    color: black;
-    background-color: rgb(255, 255, 255);
     flex: 7;
-    display: flex;
-    flex-wrap: nowrap;
-    flex-direction: column;
+    background-color: white;
 }
 
 main,
@@ -38,8 +28,7 @@ aside {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    height: 100vh;
-    width: 100vw;
+    padding: 20px;
 }
 
 main section {
@@ -145,8 +134,9 @@ aside div h3 {
 }
 
 @media screen and (max-width: 840px) {
-    body {
+    .layout {
         flex-direction: column;
+        font: 1.1em sans-serif;
     }
 
     aside,
